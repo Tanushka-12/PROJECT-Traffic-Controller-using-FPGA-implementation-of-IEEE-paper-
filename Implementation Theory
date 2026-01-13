@@ -1,0 +1,44 @@
+PROBLEMS USUALLY IN DAILY LIFE:
+At a normal traffic signal:
+Every road gets fixed green time.
+Even if one road is empty and another is jammed.
+Emergency vehicles get stuck.
+
+FPGA is chosen instead of a microcontroller because:
+FPGA ADVANTAGES : 
+Parallel processing → checks density & emergency at the same time.
+Zero software delay.
+Deterministic behavior (no crashes, no OS).
+Immediate response to emergency.
+
+One-Line Purpose of This Design is :
+This FPGA module controls a 4-road junction using minimum traffic phases, adapts green time using vehicle sensors, and gives instant priority to emergency and pedestrians.
+
+In this we have used/ tried to implement the Minimum Number of Ways to Clear Traffic in One Complete Cycle i.e.Four ways (four traffic phases)
+
+At a four-road intersection, vehicles can move in two basic directions:
+1.) Straight
+2.) Turning (left/right)
+However, all vehicles cannot move at the same time because their paths intersect, which would cause collisions. Therefore, traffic movements must be grouped carefully so that only non-conflicting vehicles move together.
+
+The entire traffic at the junction is cleared in one complete cycle by dividing vehicle movement into four non-conflicting groups:
+Way 1: North and South Turning Movements
+Vehicles from the north and south turn simultaneously.
+These movements do not intersect with each other.
+Turning traffic is cleared first.
+
+Way 2: North and South Straight Movements
+Vehicles from the north and south move straight together.
+No conflict occurs because both move in the same axis.
+This clears straight traffic in the north–south direction.
+
+Way 3: East and West Turning Movements
+Vehicles from the east and west perform turning movements together.
+These movements are non-conflicting.
+Turning traffic in the east–west direction is cleared.
+
+Way 4: East and West Straight Movements
+Vehicles from the east and west move straight at the same time.
+This completes the clearance of straight traffic in the east–west direction.
+
+After these four ways, all possible vehicle movements at the intersection have been served once, which completes one full traffic cycle.
